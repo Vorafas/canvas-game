@@ -11,7 +11,7 @@ bgImage.onload = function () {
 };
 bgImage.src = "img/background.png";
 
-var hero{
+var hero = {
 	speed: 256,
 	x: 0,
 	y: 0
@@ -21,3 +21,12 @@ var monster = {
 	y: 0
 };
 var monsterCaught = 0;
+
+var keysDown = {};
+addEventListener('keydown', function(e){
+	keysDown[e.keyCode] = true;
+});
+addEventListener('keyup', function(e){
+	delete keysDown[e.keyCode];
+});
+console.log(keysDown);
