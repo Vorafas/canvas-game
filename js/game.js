@@ -79,6 +79,19 @@ var update = function(modifier){
 		++monsterCaught;
 		reset();
 	}
+	// Can not go beyond
+	if(hero.x >= 461){
+		hero.x = 15;
+	}
+	if(hero.x <= 14){
+		hero.x = 460;
+	}
+	if(hero.y <= 21){
+		hero.y = 422;
+	}
+	if(hero.y >= 423){
+		hero.y = 24;
+	}
 };
 
 // Draw everything
@@ -103,7 +116,6 @@ var render = function(){
 // The main game loop
 var main = function(){
 	var now = Date.now();
-	console.log(now);
 	var delta = now - then;
 	update(delta / 1000);
 	render();
