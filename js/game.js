@@ -11,6 +11,20 @@ bgImage.onload = function () {
 };
 bgImage.src = "img/background.png";
 
+var heroReady = false;
+var heroImage = new Image();
+heroImage.onload = function(){
+	heroReady = true;
+};
+heroImage.src = "img/hero.png";
+
+var monsterReady = false;
+var monsterImage = new Image();
+monsterImage.onload = function(){
+	monsterReady = true;
+};
+monsterImage.src = "img/monster.png";
+
 var hero = {
 	speed: 256,
 	x: 0,
@@ -47,7 +61,7 @@ var update = function(modifier){
 	if(37 in keysDown){
 		hero.x -= hero.speed * modifier;
 	}
-	if(39 in keyDown){
+	if(39 in keysDown){
 		hero.x += hero.speed * modifier;
 	}
 	if(hero.x <= (monster.x + 32) && monster.x <= (hero.x + 32) && hero.y <= (monster.y + 32) && monster.y <= (hero.y + 32)){
@@ -82,3 +96,7 @@ var main = function(){
 	then =  now;
 	requestAnimationFrame(main);
 };
+
+var then = Date.now();
+reset();
+main();
