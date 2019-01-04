@@ -73,4 +73,12 @@ var render = function(){
 	ctx.textBaseLine = 'top';
 	ctx.fillText("Monsters caught: " + monsterCaught, 32, 32);
 };
-render();
+
+var main = function(){
+	var now = Date.now();
+	var delta = now - then;
+	update(delta / 1000);
+	render();
+	then =  now;
+	requestAnimationFrame(main);
+};
