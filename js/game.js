@@ -29,4 +29,10 @@ addEventListener('keydown', function(e){
 addEventListener('keyup', function(e){
 	delete keysDown[e.keyCode];
 });
-console.log(keysDown);
+
+var reset = function(){
+	hero.x = canvas.width / 2;
+	hero.y = canvas.height / 2;
+	monster.x = 32 + (Math.random() * (canvas.width - 64));
+	monster.y = 32 + (Math.random() * (canvas.height - 64));
+};
