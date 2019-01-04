@@ -37,7 +37,6 @@ var reset = function(){
 	monster.y = 32 + (Math.random() * (canvas.height - 64));
 };
 
-
 var update = function(modifier){
 	if(38 in keysDown){
 		hero.y -= hero.speed * modifier;
@@ -56,3 +55,22 @@ var update = function(modifier){
 		reset();
 	}
 };
+
+var render = function(){
+	if(bgReady){
+		ctx.drawImage(bgImage, 0, 0);
+	}
+	if (heroReady) {
+		ctx.drawImage(heroImage, hero.x, hero.y);
+	}
+
+	if (monsterReady) {
+		ctx.drawImage(monsterImage, monster.x, monster.y);
+	}
+	ctx.fillStyle = 'rgb(250, 250, 250)';
+	ctx.font = '24px Roboto';
+	ctx.textAlign = 'left';
+	ctx.textBaseLine = 'top';
+	ctx.fillText("Monsters caught: " + monsterCaught, 32, 32);
+};
+render();
