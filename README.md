@@ -10,5 +10,5 @@ $ git clone https://github.com/elshad98/canvas-game.git
 ```
 Then go to the folder
 ```
-$ cd code-and-magic
+$ cd canvas-game
 ```
