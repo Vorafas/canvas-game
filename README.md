@@ -6,7 +6,7 @@ Simple HTML5 Canvas game
 
 First clone this repository.
 ```
-$ git clone https://github.com/maraero/code-and-magic.git
+$ git clone https://github.com/maraero/canvas-game.git
 ```
 Then go to the folder
 ```
