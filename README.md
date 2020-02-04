@@ -1,6 +1,6 @@
 # Canvas game  
   
-Simple HTML5 Canvas game
+Simple HTML5 Canvas game 
 
 ## How to run
 
